@@ -52,6 +52,63 @@
                 return false;
             }
         }
+
+      
+       
+
     }
+
+    Class Agendamento{
+            
+        private $pdo;
+        public $msg = "";
+
+        public function conectar($dbname,$host,$usuario,$senha){
+            global $pdo;
+            try {                
+                $pdo = new PDO('mysql:host='.$host.';dbname='.$dbname, $usuario, $senha);
+                
+            } catch (PDOException $erro) {
+                global $msg;
+                $msg = $erro->getMessage();
+            }
+            
+        }
+        
+        public function cadastrar($nome,$data,$hora){
+            global $pdo;
+            //  Verifica se já existe
+            $sql = $pdo -> prepare("SELECT ID FROM usuarios WHERE Nome = $nome");
+            $sql->execute();
+            if($sql->rowCount() > 0){
+                // já existe
+                return false;
+            }else{
+                // não existe, cadastrar
+                $sql = $pdo->prepare("INSERT INTO Agendamento (Nome,hora,calendario) VALUES ('$nome','$hora','$data')");
+                $sql->execute();
+                return true;
+            }
+            
+        }
+    }
+
+    class Conexão{
+        
+        private $pdo;
+        public $msg = "";
+        public function conectar($dbname,$host,$usuario,$senha){
+            global $pdo;
+            try {                
+                $pdo = new PDO('mysql:host='.$host.';dbname='.$dbname, $usuario, $senha);
+                
+            } catch (PDOException $erro) {
+                global $msg;
+                $msg = $erro->getMessage();
+            }
+            
+        }
+    }
+
 
 ?>

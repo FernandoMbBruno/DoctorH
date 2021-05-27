@@ -1,14 +1,12 @@
 body {
     margin: 0;
     color: #6a6f8c;
-    background: rgba(128, 231, 231, 0.671);
+    background: linear-gradient(203deg, rgba(0,77,77,1) 26%, rgba(0,212,255,1) 100%);
     font: 600 16px/18px 'Open Sans', sans-serif;
 	position:absolute;
 		left:32%;
         top: 45px;
-		
-	
-    
+		 
 		
 }
 .voltar{
@@ -107,7 +105,7 @@ color: white;
 }
 
 .login-space .group .label {
-    color: #aaa;
+    color: rgba(255, 255, 255, 0.89);
     font-size: 12px
 }
 

@@ -15,7 +15,7 @@
                 if($u->logar($login,$senha)){
                   $_COOKIE['login']= $_POST['login'];
                   echo "variavel global: ".$_COOKIE['login'];
-                  header("location: ../cadastro.html");
+                  header("location: ../medic.html");
                 }else{
                     echo "<script language='javascript' type='text/javascript'>alert('Não foi possivel logar no sistema!')</script>";
                     echo "<script language='javascript' type='text/javascript'>window.location.href='../Cadastro.html';</script>";

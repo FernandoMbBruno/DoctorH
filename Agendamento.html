@@ -19,13 +19,14 @@
                     
                     <div class="login-space">
                         <div class="login"></div>
-                            <div class="group"> <label for="user" class="label">Nome Completo</label> <input id="user" type="text" class="input" placeholder="Ana juliana do Santos"> </div>
-                            <div class="group"> <label for="pass" class="label">Data</label> <input id="pass" type="password" class="input" data-type="password" placeholder="Insira sua senha"> </div>
-                            <div class="group"> <label for="pass" class="label">Calendario</label> <input id="pass" type="password" class="input" data-type="password" placeholder="Insira sua senha"> </div>
-                            <div class="group"> <input id="check" type="checkbox" class="check" checked> <label for="check"><span class="icon"></span> Continuar Logado</label> </div>
-                            <div class="group"> <input type="submit" class="button" value="Sign In"> </div>
+                        <form method="POST" action="./php/agendamento.php">
+                            <div class="group"> <label for="user" class="label">Nome Completo</label> <input id="user" type="text" class="input" placeholder="Ana juliana do Santos" name="nome"> </div>
+                            <div class="group"> <label for="date" class="label">Calendario</label> <input id="pass" type="date" class="input" data-type="" placeholder="" name="data"> </div>
+                            <div class="group"> <label for="pass" class="label">Horario</label> <input id="pass" type="text" class="input" data-type="" placeholder="Insira um horario" name="hora"> </div>
+                            <div class="group"> <input type="submit" class="button" value="agendar"> </div>
+                        </form>
                             <div class="hr"></div>
-                            <div class="foot"> <a href="#">Esqueceu a senha?</a> </div>
+                            
                         </div>
 
                        
