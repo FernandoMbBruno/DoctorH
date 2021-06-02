@@ -17,23 +17,44 @@
             
         }
         
-        public function cadastrar($login,$senha){
+        public function cadastrar($login,$senha,$email){
             global $pdo;
             $senhaMD5=MD5($senha);
             //  Verifica se já existe
-            $sql = $pdo -> prepare("SELECT ID FROM usuarios WHERE login = $login");
+            $sql = $pdo->query("SELECT * FROM usuarios WHERE login='$login'");
             $sql->execute();
             if($sql->rowCount() > 0){
-                // já existe
+                echo "Este usuário já existe";
                 return false;
-            }else{
+            }
+            else{
                 // não existe, cadastrar
-                $sql = $pdo->prepare("INSERT INTO usuarios (login,senha) VALUES ('$login','$senhaMD5')");
+                $sql = $pdo->prepare("INSERT INTO usuarios (login,senha,email) VALUES ('$login','$senhaMD5','$email')");
                 $sql->execute();
                 return true;
             }
             
         }
+
+        public function cadastrar_medico($login,$senha,$email,$CRM,$espec){
+            global $pdo;
+            $senhaMD5=MD5($senha);
+            //  Verifica se já existe
+            $sql = $pdo->query("SELECT * FROM medico WHERE login='$login'");
+            $sql->execute();
+            if($sql->rowCount() > 0){
+                echo "Este usuário já existe";
+                return false;
+            }
+            else{
+                // não existe, cadastrar
+                $sql = $pdo->prepare("INSERT INTO medico (login,senha,email,CRM,Espec) VALUES ('$login','$senhaMD5','$email','$CRM','$espec')");
+                $sql->execute();
+                return true;
+            }
+            
+        }
+
 
         public function logar($login,$senha){
             global $pdo;
@@ -75,17 +96,17 @@
             
         }
         
-        public function cadastrar($nome,$data,$hora){
+        public function cadastrar($nome,$data,$hora,$espec){
             global $pdo;
             //  Verifica se já existe
-            $sql = $pdo -> prepare("SELECT ID FROM usuarios WHERE Nome = $nome");
+            $sql = $pdo -> prepare("SELECT ID FROM agendamento WHERE Nome = $nome");
             $sql->execute();
             if($sql->rowCount() > 0){
                 // já existe
                 return false;
             }else{
                 // não existe, cadastrar
-                $sql = $pdo->prepare("INSERT INTO Agendamento (Nome,hora,calendario) VALUES ('$nome','$hora','$data')");
+                $sql = $pdo->prepare("INSERT INTO Agendamento (Nome,hora,calendario,Espec) VALUES ('$nome','$hora','$data','$espec')");
                 $sql->execute();
                 return true;
             }

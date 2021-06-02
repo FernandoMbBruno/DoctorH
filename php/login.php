@@ -6,10 +6,9 @@
     if(isset($_POST['login'])){
         $login = addslashes($_POST['login']);
         $senha = addslashes($_POST['senha']);
-        /*echo "login: ".$login.", senha: ".$senha;
-        echo "";*/
+     
         if(!empty($login) && !empty($senha)){
-            $u->conectar('Teste','localhost','root',''); 
+            $u->conectar('VinDiesel','localhost','root',''); 
             //echo "msg: ".$msg;
             if($u->msg == ""){
                 if($u->logar($login,$senha)){

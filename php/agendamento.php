@@ -7,13 +7,15 @@
         $nome = addslashes($_POST['nome']);
         $data = addslashes($_POST['data']);
         $hora = addslashes($_POST['hora']);
+        $espec = addslashes($_POST['espec']);
+        
 
         
         if(!empty($nome) && !empty($data)){
-            $u->conectar('teste','localhost','root',''); 
+            $u->conectar('VinDiesel','localhost','root',''); 
             echo "$msg";
                 if($u->msg == ""){
-                if($u->cadastrar($nome,$data,$hora)){
+                if($u->cadastrar($nome,$data,$hora,$espec)){
                     echo "<script language='javascript' type='text/javascript'>alert('Agendado com sucesso!')</script>";
                     echo "<script language='javascript' type='text/javascript'>window.location.href='../Agendamento.html'</script>";
                 }
