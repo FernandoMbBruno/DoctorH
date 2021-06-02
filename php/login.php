@@ -16,7 +16,7 @@
                   echo "variavel global: ".$_COOKIE['login'];
                   header("location: ../medic.html");
                 }else{
-                    echo "<script language='javascript' type='text/javascript'>alert('Não foi possivel logar no sistema!')</script>";
+                    echo "<script language='javascript' type='text/javascript'>alert('Senha ou Usuario Incorreto')</script>";
                     echo "<script language='javascript' type='text/javascript'>window.location.href='../Cadastro.html';</script>";
                 }
             }else{

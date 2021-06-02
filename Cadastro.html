@@ -18,8 +18,8 @@
                     <div class="login-space">
                         <div class="login">
                             <form method="POST" action="./php/login.php">
-                            <div class="group">   <label for="user" class="label">Usuario</label> <input id="login" type="text" class="input" placeholder="Insira um usuario" name="login"> </div>
-                             <div class="group">  <label for="pass" class="label">Senha</label> <input id="senha" type="password" class="input" data-type="password" placeholder="Crie uma senha" name="senha"> </div>
+                            <div class="group">   <label for="user" class="label">Usuario</label> <input id="login" type="text" class="input" maxlength="15" placeholder="Insira um usuario" name="login"> </div>
+                             <div class="group">  <label for="pass" class="label">Senha</label> <input id="senha" type="password" class="input" maxlength="10" data-type="password" placeholder="Crie uma senha" name="senha" > </div>
                              <div class="group"> <input type="submit" class="button" value="Entrar" name="entrar"> </div>
                             </form>
                         </div>
@@ -27,8 +27,8 @@
 
                         <div class="sign-up-form">
                             <form method="POST" action="./php/Cadastro.php">
-                             <div class="group"> <label for="user" class="label">Usuario</label> <input id="login" type="text" class="input" placeholder="Insira um usuario" name="login"> </div>
-                             <div class="group"> <label for="pass" class="label">Senha</label> <input id="senha" type="password" class="input" data-type="password" placeholder="Crie uma senha" name="senha"> </div>
+                             <div class="group"> <label for="user" class="label">Usuario</label> <input id="login" type="text" class="input" maxlength="15"placeholder="Insira um usuario" name="login"> </div>
+                             <div class="group"> <label for="pass" class="label">Senha</label> <input id="senha" type="password" class="input" maxlength="10" data-type="password" placeholder="Crie uma senha" name="senha"> </div>
                              <div class="group"> <label for="pass" class="label">Email</label> <input id="pass" type="email" class="input" placeholder="exemplo@exemplo.com" name="email"> </div>
                              <div class="group"> <input type="submit" class="button" value="cadastrar"> </div>
                           </form>
