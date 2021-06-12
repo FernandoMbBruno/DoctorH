@@ -9,7 +9,7 @@ require_once 'classe.php';
     echo "<th>Horario</th>";
     echo "</tr>";
 
-    $strcon = mysqli_connect('localhost','root','','Teste') or die ('erro ao acessar o banco de dados');
+    $strcon = mysqli_connect('localhost','root','','VinDiesel') or die ('erro ao acessar o banco de dados');
     $sql = "select * from Agendamento";
     $result = mysqli_query($strcon,$sql) or die('erro ao acessar a tabela');
 
@@ -30,3 +30,6 @@ require_once 'classe.php';
 
     
 ?>
+
+<html>+
+</html>

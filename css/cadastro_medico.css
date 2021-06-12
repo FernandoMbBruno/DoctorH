@@ -14,15 +14,22 @@ margin-right: 10px;
 color: white;
 
 }
+.teste{
+text-align: center;
+top: -115px;
+color: white;
+position: relative;
+}
 
 .login-box {
     width: 100%;
     margin: auto;
-    max-width: 525px;
+    max-width: 530x;
     min-height: 670px;
     position: relative;
-    background: url(../images/microscope-275984_1920.jpg) no-repeat center;
+    background: url(../images/login_medico.jpg) center ;
     box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19)
+
 }
 
 .login-snip {
@@ -30,7 +37,7 @@ color: white;
     height: 100%;
     position: absolute;
     padding: 90px 70px 50px 70px;
-    background: rgba(0, 77, 77, .9)
+    background: rgba(0, 77, 77, 0.829)
 }
 
 .login-snip .login,

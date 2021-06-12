@@ -74,6 +74,25 @@
             }
         }
 
+
+        public function logar_medico($login,$senha){
+            global $pdo;
+            $senhaMD5=MD5($senha);
+            // //  Verifica se está cadastrado
+            $sql = $pdo->prepare("SELECT login FROM medico WHERE login = '$login' AND senha = '$senhaMD5'");
+            $sql->execute();
+            if($sql->rowCount() > 0){
+                // está cadastrado
+                $dado = $sql -> fetch();
+                session_start();
+                $_SESSION['ID'] = $dado['login'];
+                return true;
+            }else{
+                // não está cadastrado
+                return false;
+            }
+        }
+
       
        
 
@@ -96,17 +115,17 @@
             
         }
         
-        public function cadastrar($nome,$data,$hora,$espec){
+        public function cadastrar($nome,$data,$espec){
             global $pdo;
             //  Verifica se já existe
-            $sql = $pdo -> prepare("SELECT ID FROM agendamento WHERE Nome = $nome");
+            $sql = $pdo -> prepare("SELECT ID FROM Agendamento WHERE title = $nome");
             $sql->execute();
             if($sql->rowCount() > 0){
                 // já existe
                 return false;
-            }else{
+            }else{ 
                 // não existe, cadastrar
-                $sql = $pdo->prepare("INSERT INTO Agendamento (Nome,hora,calendario,Espec) VALUES ('$nome','$hora','$data','$espec')");
+                $sql = $pdo->prepare("INSERT INTO Agendamento (title,start,Espec) VALUES ('$nome','$data','$espec')");
                 $sql->execute();
                 return true;
             }

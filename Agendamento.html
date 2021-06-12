@@ -1,6 +1,12 @@
+
 <head>
     <script src="https://kit.fontawesome.com/fee4e74da2.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/Agendamento.css"> 
+    <link rel="stylesheet" href="./css/Agendamento.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento</title>
+
 </head>
 <div class="row">
     <div class="col-md-6 mx-auto p-0">
@@ -21,8 +27,8 @@
                         <div class="login"></div>
                         <form method="POST" action="./php/agendamento.php">
                             <div class="group"> <label for="user" class="label">Nome Completo</label> <input id="user" type="text" class="input" placeholder="Ana juliana do Santos" name="nome"> </div>
-                            <div class="group"> <label for="date" class="label">Calendario</label> <input id="pass" type="date" class="input" data-type="" placeholder="" name="data"> </div>
-                            <div class="group"> <label for="pass" class="label">Horario</label> <input id="pass" type="time" class="input" data-type="" placeholder="Insira um horario" name="hora"> </div>
+                            <div class="group"> <label for="date" class="label">Calendario / Horario</label> <input id="pass" type="datetime-local" class="input" data-type="" placeholder="" name="data"> </div>
+               
                         
                             <div class="group"><label for="esp" class="label">Escolha a Especialidade</label> <input list="esp" name="espec" id="espec" class="input" name="espec"></div>
                                 <datalist id="esp">
@@ -53,3 +59,15 @@
         </div>
     </div>
 </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+</head>
+<body>
+    
+</body>
+</html>

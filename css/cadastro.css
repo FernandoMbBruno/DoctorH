@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     color: #6a6f8c;
@@ -9,6 +10,8 @@ body {
 		 
 		
 }
+
+
 .voltar{
 margin-right: 10px;
 color: white;
@@ -32,9 +35,12 @@ color: white;
     padding: 90px 70px 50px 70px;
     background: rgba(0, 77, 77, .9)
 }
-
+.scale-in-hor-center {
+	animation: scale-in-hor-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
 .login-snip .login,
 .login-snip .sign-up-form {
+    
     top: 0;
     left: 0;
     right: 0;
@@ -198,7 +204,7 @@ a {
 }
 
 .foot {
-    text-align: center;
+   
     color: whitesmoke;
 }
 
