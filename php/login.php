@@ -14,7 +14,7 @@
                 if($u->logar($login,$senha)){
                   $_COOKIE['login']= $_POST['login'];
                   echo "variavel global: ".$_COOKIE['login'];
-                  header("location: ../medic.html");
+                  header("location: ../index_2.php");
                 }else{
                     echo "<script language='javascript' type='text/javascript'>alert('Senha ou Usuario Incorreto')</script>";
                     echo "<script language='javascript' type='text/javascript'>window.location.href='../Cadastro.html';</script>";

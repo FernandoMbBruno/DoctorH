@@ -3479,6 +3479,13 @@ input[type="button"].btn-block {
   .navbar-brand:hover, .navbar-brand:focus {
     text-decoration: none; }
 
+.teste{
+  font-size: 1.25rem;
+  font-family: "Poppins", Arial, sans-serif;
+  color: black;
+  font-weight: 900;
+}
+
 .navbar-nav {
   display: -webkit-box;
   display: -ms-flexbox;
