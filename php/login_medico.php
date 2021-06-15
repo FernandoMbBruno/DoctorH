@@ -14,7 +14,7 @@
                 if($u->logar_medico($login,$senha)){
                   $_COOKIE['login']= $_POST['login'];
                   echo "variavel global: ".$_COOKIE['login'];
-                  header("location: ../Visualizar_medico.html");
+                  header("location: ../Visualizar_medico.php");
                 }else{
                     echo "<script language='javascript' type='text/javascript'>alert('Senha ou Usuario Incorreto')</script>";
                     echo "<script language='javascript' type='text/javascript'>window.location.href='../Cadastro.html';</script>";
@@ -27,5 +27,3 @@
             echo "<script language='javascript' type='text/javascript'>window.location.href='../Cadastro.html';</script>";
         }
     }
-
-?>

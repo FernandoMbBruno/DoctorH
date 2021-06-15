@@ -29,5 +29,3 @@
             echo "<script language='javascript' type='text/javascript'>window.location.href='../cadastro_medic.html';</script>";
         }
     }
-
-?>

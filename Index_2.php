@@ -1,6 +1,7 @@
 <?php
 require_once './php/classe.php';
 $u = new usuario();
+
 ?>
 
 
@@ -9,15 +10,17 @@ $u = new usuario();
 <html lang="en">
 
 <head>
+	<!--HTML5 -->
 	<title> Bem vindo Doctor H</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--Importando icones  -->
+	<link href="./css/fontawesome-free-5.15.3-web/css/all.css" rel="stylesheet">
 
+	<!--Importando CSS,JS... -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
 	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
 	<link rel="stylesheet" href="css/animate.css">
-
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="css/magnific-popup.css">
@@ -32,12 +35,18 @@ $u = new usuario();
 </head>
 
 <div>
-        <?php
+	<!--Iniciando uma sessão no php, Fazendo a segurança para que o usuario que não esteja cadastrado não entre -->
+	<?php
 
-            session_start();            
-           
-        ?>
-    </div>
+	session_start();
+	if (!isset($_SESSION['ID'])) {
+		echo '<script type="text/JavaScript"> alert("Você não tem acesso essa pagina");
+		window.location.href = "index.html";
+		</script>';
+	} else {
+	}
+	?>
+</div>
 
 
 
@@ -53,10 +62,11 @@ $u = new usuario();
 					<div class="row d-flex">
 						<div class="col-md pr-4 d-flex topper align-items-center">
 							<div class="icon mr-2 d-flex justify-content-center align-items-center"><span></span></div>
-							<span class="text"><?php  echo " Seja Bem-Vindo, ".$_SESSION['ID']." <br />"; ?></span>
+							<span class="text"><?php echo " Seja Bem-Vindo, " . $_SESSION['ID'] . " <br />"; ?></span>
+							<!--Fazendo aparecer o Usuario que está logado com $_session['ID'] -->
 						</div>
 						<div class="col-md pr-4 d-flex topper align-items-center">
-							
+
 							<span class="text"></span>
 						</div>
 						<div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right justify-content-end">
@@ -116,7 +126,7 @@ $u = new usuario();
 							<div class="col-md-12 heading-section ftco-animate p-4 p-lg-5">
 								<h2 class="mb-4">Nos somos <span>Doctor H</span></h2>
 								<p>Assim como realmente a medicina em nada beneficia se não liberta dos males do corpo, assim também sucede com a filosofia se não liberta das paixões da alma.</p>
-								
+
 							</div>
 						</div>
 					</div>
@@ -141,8 +151,8 @@ $u = new usuario();
 								<div class="media block-6 services d-flex">
 									<div class="icon justify-content-center align-items-center d-flex"><span class="flaticon-ambulance"></span></div>
 									<div class="media-body pl-md-4">
-										<h3 class="heading mb-3">Emergency Services</h3>
-										<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+										<h3 class="heading mb-3">Presencial</h3>
+										<p>Mediante algumas situação nossos medicos poderá ir até sua casa caso queira</p>
 									</div>
 								</div>
 							</div>
@@ -176,9 +186,9 @@ $u = new usuario();
 						</div>
 					</div>
 				</div>
-				
-				</div>
+
 			</div>
+		</div>
 		</div>
 	</section>
 
@@ -189,7 +199,6 @@ $u = new usuario();
 				<div class="col-md-9 text-center">
 					<h2>Sua saude e nossa prioridade</h2>
 					<br>
-					<p class="mb-0"><a href="#" class="btn btn-white px-4 py-3">Search Places</a></p>
 				</div>
 			</div>
 		</div>
@@ -199,7 +208,8 @@ $u = new usuario();
 		<div class="container-fluid px-0">
 			<div class="row no-gutters">
 				<div class="col-md-4 d-flex">
-					<div class="img img-dept align-self-stretch" style="background-image: url(images/dept-1.jpg);"></div>
+					<div class="img img-dept align-self-stretch" style="background-image: url(images/dept-1.jpg);">
+					</div>
 				</div>
 
 				<div class="col-md-8">
@@ -208,28 +218,28 @@ $u = new usuario();
 							<div class="department-wrap p-4 ftco-animate">
 								<div class="text p-2 text-center">
 									<div class="icon">
-										<span class="flaticon-stethoscope"></span>
+										<span class="fas fa-user-nurse"></span>
 									</div>
 									<h3><a href="#">Enfermagem</a></h3>
-									<p>Far far away, behind the word mountains</p>
+									<p></p>
 								</div>
 							</div>
 							<div class="department-wrap p-4 ftco-animate">
 								<div class="text p-2 text-center">
 									<div class="icon">
-										<span class="flaticon-stethoscope"></span>
+										<span class="fas fa-syringe"></span>
 									</div>
-									<h3><a href="#">Aplicação de medicação</a></h3>
-									<p>Far far away, behind the word mountains</p>
+									<h3><a href="#">Medicação</a></h3>
+									<p></p>
 								</div>
 							</div>
 							<div class="department-wrap p-4 ftco-animate">
 								<div class="text p-2 text-center">
 									<div class="icon">
-										<span class="flaticon-stethoscope"></span>
+										<span class="fas fa-bed"></span>
 									</div>
 									<h3><a href="#">Cuidador de idosos</a></h3>
-									<p>Far far away, behind the word mountains</p>
+									<p></p>
 								</div>
 							</div>
 						</div>
@@ -238,28 +248,28 @@ $u = new usuario();
 							<div class="department-wrap p-4 ftco-animate">
 								<div class="text p-2 text-center">
 									<div class="icon">
-										<span class="flaticon-stethoscope"></span>
+										<span class="fas fa-crutch"></span>
 									</div>
 									<h3><a href="#">Fisioterapia</a></h3>
-									<p>Far far away, behind the word mountains</p>
+									<p></p>
 								</div>
 							</div>
 							<div class="department-wrap p-4 ftco-animate">
 								<div class="text p-2 text-center">
 									<div class="icon">
-										<span class="flaticon-stethoscope"></span>
+										<span class="fas fa-user-md"></span>
 									</div>
 									<h3><a href="#">Visita Medica</a></h3>
-									<p>Far far away, behind the word mountains.</p>
+									<p></p>
 								</div>
 							</div>
 							<div class="department-wrap p-4 ftco-animate">
 								<div class="text p-2 text-center">
 									<div class="icon">
-										<span class="flaticon-stethoscope"></span>
+										<span class="fas fa-comment-medical"></span>
 									</div>
 									<h3><a href="#">Psicologia</a></h3>
-									<p>Far far away, behind the word mountains</p>
+									<p></p>
 								</div>
 							</div>
 						</div>
@@ -268,28 +278,28 @@ $u = new usuario();
 							<div class="department-wrap p-4 ftco-animate">
 								<div class="text p-2 text-center">
 									<div class="icon">
-										<span class="flaticon-stethoscope"></span>
+										<span class="fas fa-comments"></span>
 									</div>
 									<h3><a href="#">Fonoaudiologia</a></h3>
-									<p>Far far away, behind the word mountains</p>
+									<p></p>
 								</div>
 							</div>
 							<div class="department-wrap p-4 ftco-animate">
 								<div class="text p-2 text-center">
 									<div class="icon">
-										<span class="flaticon-stethoscope"></span>
+										<span class="fas fa-utensils"></span>
 									</div>
 									<h3><a href="#">Nutricionista</a></h3>
-									<p>Far far away, behind the word mountains</p>
+									<p></p>
 								</div>
 							</div>
 							<div class="department-wrap p-4 ftco-animate">
 								<div class="text p-2 text-center">
 									<div class="icon">
-										<span class="flaticon-stethoscope"></span>
+										<span class="fas fa-diagnoses"></span>
 									</div>
 									<h3><a href="#">Dermatologista</a></h3>
-									<p>Far far away, behind the word mountains</p>
+									<p></p>
 								</div>
 							</div>
 						</div>
@@ -506,9 +516,9 @@ $u = new usuario();
 						<a class="teste" href="index.html">Doctor H</a>
 
 						<p class="copyright-text">
-							
-							Email:	doctorHhomecare@gmail.com <br> <br>
-							
+
+							Email: doctorHhomecare@gmail.com <br> <br>
+
 							Copyright © 2021 | DoctorH.
 						</p>
 					</div>

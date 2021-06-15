@@ -1,7 +1,8 @@
 body {
     margin: 0;
     color: #6a6f8c;
-    background: linear-gradient(203deg, rgba(0,77,77,1) 26%, rgba(0,212,255,1) 100%);
+    -webkit-animation: color-change-2x 5s linear infinite alternate both;
+    animation: color-change-2x s linear infinite alternate both;
     font: 600 16px/18px 'Open Sans', sans-serif;
 	position:absolute;
 		left:32%;
@@ -9,6 +10,29 @@ body {
 		 
 		
 }
+
+
+
+
+
+@-webkit-keyframes color-change-2x {
+    0% {
+      background: #19dcea;
+    }
+    100% {
+      background: #1b7177;
+    }
+  }
+  @keyframes color-change-2x {
+    0% {
+      background: #19dcea;
+    }
+    100% {
+      background: #1b7177;
+    }
+  }
+
+
 .voltar{
 margin-right: 10px;
 color: white;

@@ -7,9 +7,78 @@ body {
 	position:absolute;
 		left:32%;
         top: 45px;
+
+        -webkit-animation: color-change-2x 5s linear infinite alternate both;
+	        animation: color-change-2x 5s linear infinite alternate both;
 		 
 		
 }
+
+
+
+
+
+
+@-webkit-keyframes color-change-2x {
+    0% {
+      background: #19dcea;
+    }
+    100% {
+      background: #1b7177;
+    }
+  }
+  @keyframes color-change-2x {
+    0% {
+      background: #19dcea;
+    }
+    100% {
+      background: #1b7177;
+    }
+  }
+
+  .kenburns-top-right {
+	-webkit-animation: kenburns-top-right 5s ease-out both;
+	        animation: kenburns-top-right 5s ease-out both;
+
+            
+}
+
+
+  @-webkit-keyframes kenburns-top-right {
+    0% {
+      -webkit-transform: scale(1) translate(0, 0);
+              transform: scale(1) translate(0, 0);
+      -webkit-transform-origin: 84% 16%;
+              transform-origin: 84% 16%;
+    }
+    100% {
+      -webkit-transform: scale(1.25) translate(20px, -15px);
+              transform: scale(1.25) translate(20px, -15px);
+      -webkit-transform-origin: right top;
+              transform-origin: right top;
+    }
+  }
+  @keyframes kenburns-top-right {
+    0% {
+      -webkit-transform: scale(1) translate(0, 0);
+              transform: scale(1) translate(0, 0);
+      -webkit-transform-origin: 84% 16%;
+              transform-origin: 84% 16%;
+    }
+    100% {
+      -webkit-transform: scale(1.25) translate(20px, -15px);
+              transform: scale(1.25) translate(20px, -15px);
+      -webkit-transform-origin: right top;
+              transform-origin: right top;
+    }
+  }
+  
+  
+  
+
+
+
+
 
 
 .voltar{
@@ -25,7 +94,8 @@ color: white;
     min-height: 670px;
     position: relative;
     background: url(../images/microscope-275984_1920.jpg) no-repeat center;
-    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19)
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, .19);
+   
 }
 
 .login-snip {
@@ -33,7 +103,8 @@ color: white;
     height: 100%;
     position: absolute;
     padding: 90px 70px 50px 70px;
-    background: rgba(0, 77, 77, .9)
+    background: rgba(0, 77, 77, 0.849);
+ 
 }
 .scale-in-hor-center {
 	animation: scale-in-hor-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -46,10 +117,15 @@ color: white;
     right: 0;
     bottom: 0;
     position: absolute;
-    transform: rotateY(180deg);
+    transform: rotateY(200deg);
     backface-visibility: hidden;
-    transition: all .4s linear
+    transition: all .4s linear;
+    
+    
+    
 }
+
+
 
 .login-snip .sign-in,
 .login-snip .sign-up,
