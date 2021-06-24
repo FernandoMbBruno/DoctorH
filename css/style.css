@@ -40,6 +40,10 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+
+
+
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -8319,7 +8323,8 @@ h1, h2, h3, h4, h5,
     bottom: 0;
     content: '';
     opacity: 0;
-    background: #000000; }
+    background: #b4b4b4;
+    opacity: 0.1; }
   .hero-wrap.hero-wrap-2 {
     height: 600px;
     position: relative;

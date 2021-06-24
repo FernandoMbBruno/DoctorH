@@ -91,7 +91,7 @@
                     <dd class="col-sm-9 " id="horario"></dd>
 
                     <dt class="col-sm-3"> Videoconferência: </dt>
-                    <dd class="col-sm-9 " id=><a href="https://video-app-6803-4828-dev.twil.io/?passcode=41581768034828"> Entrar</a></dd>
+                    <dd class="col-sm-9 " id=><a href="https://video-app-6803-4828-dev.twil.io?passcode=93500568034828"> Entrar</a></dd>
 
 
 

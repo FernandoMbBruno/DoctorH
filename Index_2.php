@@ -92,12 +92,13 @@ $u = new usuario();
 					<li class="nav-item"><a href="#doctor-section" class="nav-link"><span>Top Médicos</span></a></li>
 					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contato</span></a></li>
 					<li class="nav-item cta mr-md-2"><a href="Agendamento.html" class="nav-link">Agendamento</a></li>
+					<li class="nav-item cta mr-Fmd-2"><a href="https://video-app-6803-4828-dev.twil.io?passcode=93500568034828" class="nav-link">Telemedicina </a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 
-	<section class="hero-wrap js-fullheight" style="background-image: url(images/Doc.jpg)" data-section="home" data-stellar-background-ratio="0.5">
+	<section class="hero-wrap js-fullheight" style="background-image: url(images/Doc.png)" data-section="home" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
