@@ -17,13 +17,13 @@
                   header("location: ../Visualizar_medico.php");
                 }else{
                     echo "<script language='javascript' type='text/javascript'>alert('Senha ou Usuario Incorreto')</script>";
-                    echo "<script language='javascript' type='text/javascript'>window.location.href='../Cadastro.html';</script>";
+                    echo "<script language='javascript' type='text/javascript'>window.location.href='../Cadastro_medic.html';</script>";
                 }
             }else{
                 echo "Erro: ".$u->msg;
             }
         }else {
             echo "<script language='javascript' type='text/javascript'>alert('Preenha todos os campos!')</script>";
-            echo "<script language='javascript' type='text/javascript'>window.location.href='../Cadastro.html';</script>";
+            echo "<script language='javascript' type='text/javascript'>window.location.href='../Cadastro_medic.html';</script>";
         }
     }
